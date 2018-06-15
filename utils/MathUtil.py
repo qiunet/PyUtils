@@ -50,3 +50,30 @@ def sort(it: Iterable, reverse: bool= False, key: [FunctionType or LambdaType or
     :return: 
     """
     return list(sorted(it, key=key, reverse=reverse))
+
+
+def forceToInt(num) -> int:
+    """
+    强转int (python 只有一种整数数据类型. int 但是指的是长整型 )
+    :param num: 整数 
+    :return: int
+    """
+    return num & 0xFFFFFFFF
+
+
+def forceToShort(num) -> int:
+    """
+    强转short
+    :param num: 整数 
+    :return: short
+    """
+    return num & 0xFFFF
+
+
+def forceToByte(num) -> int:
+    """
+    强转byte
+    :param num: 整数 
+    :return: byte
+    """
+    return num & 0xFF
