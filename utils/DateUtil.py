@@ -45,7 +45,7 @@ def stringToDate(dateString: str, formatStr: str) -> datetime:
     :param formatStr: 字符串的格式
     :return: 时间对象
     """
-    return datetime.datetime.strftime(dateString, formatStr)
+    return datetime.datetime.strptime(dateString, formatStr)
 
 
 def datetimeNow() -> datetime:
